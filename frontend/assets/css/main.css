@@ -1,0 +1,104 @@
+@import '@fontsource/phetsarath/400.css';
+@import '@fontsource/phetsarath/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Phetsarath', 'Noto Sans SC', 'Inter', sans-serif;
+    @apply text-dark bg-white;
+  }
+  h1, h2, h3 {
+    font-family: 'Playfair Display', 'Phetsarath', 'Noto Sans SC', serif;
+  }
+}
+
+@layer components {
+  /* ===== GOLD GRADIENT TEXT (ທອງ→ຂາວອ່ອນ) ===== */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #C9A227 0%, #e8d48b 35%, #f5ecd0 50%, #e8d48b 65%, #C9A227 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ===== BUTTONS ===== */
+  .btn-primary {
+    @apply text-white px-6 py-3 font-semibold rounded-lg transition-all duration-300;
+    background: linear-gradient(135deg, #E2231A 0%, #B91C14 100%);
+    box-shadow: 0 4px 12px rgba(226, 35, 26, 0.3);
+  }
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #C91E17 0%, #9B1410 100%);
+    box-shadow: 0 6px 20px rgba(226, 35, 26, 0.4);
+    transform: translateY(-1px);
+  }
+
+  .btn-gold {
+    @apply text-white px-6 py-3 font-semibold rounded-lg transition-all duration-300;
+    background: linear-gradient(135deg, #C9A227 0%, #d4af37 50%, #e8d48b 100%);
+    box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+  }
+  .btn-gold:hover {
+    background: linear-gradient(135deg, #a68520 0%, #C9A227 50%, #d4af37 100%);
+    box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+    transform: translateY(-1px);
+  }
+
+  /* ===== SECTION TITLE ===== */
+  .section-title {
+    @apply text-3xl md:text-4xl font-heading font-bold text-center mb-4;
+    color: #333;
+  }
+
+  /* ===== GOLD DIVIDER (ທອງ→ຂາວອ່ອນ→ທອງ) ===== */
+  .gold-divider {
+    width: 80px;
+    height: 3px;
+    margin: 0 auto 32px;
+    background: linear-gradient(90deg, #C9A227 0%, #e8d48b 30%, #f5ecd0 50%, #e8d48b 70%, #C9A227 100%);
+    border-radius: 2px;
+  }
+
+  /* ===== PAGE BANNER (ແດງ→ທອງ→ດຳອ່ອນ) ===== */
+  .page-banner {
+    background: linear-gradient(135deg, #E2231A 0%, #B91C14 30%, #8B1510 50%, #0a0d4a 80%, #040636 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .page-banner::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #C9A227, #e8d48b, #f5ecd0, #e8d48b, #C9A227);
+  }
+  .page-banner::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(201, 162, 39, 0.15) 0%, transparent 60%);
+  }
+  .page-banner .gold-divider {
+    background: linear-gradient(90deg, rgba(255,255,255,0.2), #e8d48b, #f5ecd0, #e8d48b, rgba(255,255,255,0.2));
+  }
+
+  /* ===== SECTION LINE DIVIDER ===== */
+  .section-line {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 5%, #C9A227 20%, #e8d48b 40%, #f5ecd0 50%, #e8d48b 60%, #C9A227 80%, transparent 95%);
+  }
+
+  /* ===== CARD HOVER ===== */
+  .card-hover {
+    @apply bg-white rounded-xl shadow-md transition-all duration-500;
+    border: 1px solid transparent;
+  }
+  .card-hover:hover {
+    @apply shadow-2xl;
+    transform: translateY(-4px);
+    border-color: rgba(201, 162, 39, 0.3);
+  }
+}

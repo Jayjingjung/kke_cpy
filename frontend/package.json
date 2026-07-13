@@ -1,0 +1,25 @@
+{
+  "name": "khounkham-frontend",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "lint": "eslint . --ext .vue,.ts",
+    "test": "vitest --passWithNoTests"
+  },
+  "dependencies": {
+    "@fontsource/phetsarath": "^5.2.8",
+    "@nuxtjs/i18n": "^9.5.6",
+    "@pinia/nuxt": "^0.7.0",
+    "pinia": "^2.2.4"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^1.6.0",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "nuxt": "^3.14.0",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.2"
+  }
+}
