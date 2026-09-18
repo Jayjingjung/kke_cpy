@@ -2,9 +2,21 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "backend",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "cd /Users/macbook/Desktop/company_kke_pf/kke_cpy/backend && PORT=4001 CORS_ORIGIN=http://localhost:3001 npm run dev"
+      ],
+      "port": 4001
+    },
+    {
       "name": "frontend",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev", "--prefix", "frontend", "--", "--port", "3001"],
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "cd /Users/macbook/Desktop/company_kke_pf/kke_cpy/frontend && NUXT_API_BASE_INTERNAL=http://localhost:4001 NUXT_PUBLIC_API_BASE=http://localhost:4001 npm run dev -- --port 3001"
+      ],
       "port": 3001
     }
   ]
